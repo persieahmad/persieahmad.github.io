@@ -1,142 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal Portfolio of Ahmad Sadiq, Senior Engineer at Target">
-  <title>Ahmad Sadiq - Senior Engineer | Portfolio</title>
+  <title>Ahmad Sadiq · Senior Frontend Engineer</title>
+  <meta name="description" content="Ahmad Sadiq: Senior Frontend Engineer at Target. React, Next.js, TypeScript, web performance and scalable web architecture for 100M+ users.">
+  <meta name="author" content="Ahmad Sadiq">
+  <meta name="theme-color" content="#0a0a12">
+  <link rel="canonical" href="https://persieahmad.github.io/portfolio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmad Sadiq · Senior Frontend Engineer">
+  <meta property="og:description" content="React · Next.js · TypeScript · Performance & scalable web architecture at Target.">
+  <meta property="og:url" content="https://persieahmad.github.io/portfolio/">
+  <meta property="og:image" content="https://persieahmad.github.io/portfolio/assets/ahmad.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a12'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='26' fill='%2322d3ee'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    // Apply saved theme before paint to avoid a flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 class="name">Ahmad Sadiq</h1>
-      <p class="title">Senior Engineer | Web Performance Enthusiast</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="Ahmad Sadiq, home">
+        <span class="logo-bracket">&lt;</span>Ahmad<span class="logo-accent">Sadiq</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#impact"><span class="num">01.</span>Impact</a></li>
+          <li><a href="#about"><span class="num">02.</span>About</a></li>
+          <li><a href="#experience"><span class="num">03.</span>Experience</a></li>
+          <li><a href="#work"><span class="num">04.</span>Highlights</a></li>
+          <li><a href="#skills"><span class="num">05.</span>Stack</a></li>
+          <li><a href="#contact"><span class="num">06.</span>Contact</a></li>
         </ul>
       </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle color theme">
+          <i class="fa-solid fa-moon icon-dark"></i><i class="fa-solid fa-sun icon-light"></i>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate software engineer with 4.5+ years of experience in building and deploying applications using TypeScript/JavaScript with technologies like React.js, Redux, Next.js, AWS, Firebase, and many others. My expertise lies in improving web performance and optimizing the user experience for large-scale platforms like Target.com.
-      </p>
-      <p>
-        I thrive in collaborative environments, working with designers, product owners, and fellow engineers to create new features and improve existing systems. I'm also highly focused on writing maintainable code, testing, and contributing to quality assurance efforts.
-      </p>
-      <button id="themeToggle">Toggle Dark Mode</button>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-
-      <!-- Experience at Target -->
-      <div class="job">
-        <h3>Senior Engineer at Target</h3>
-        <p><strong>Jul 2023 - Present</strong></p>
-        <p>
-          I focus on optimizing web performance and system observability at Target.com. My work ensures a seamless experience for millions of users by tackling performance bottlenecks and improving the scalability of our web systems.
-        </p>
-        <ul>
-          <li>Implemented advanced web performance monitoring using Grafana and Kibana.</li>
-          <li>Worked on the web performance guild to enhance the overall guest experience.</li>
-        </ul>
-      </div>
-
-      <!-- Experience at Speridian Technologies -->
-      <div class="job">
-        <h3>System Analyst at Speridian Technologies</h3>
-        <p><strong>Mar 2021 - Mar 2022 · 1 yr 1 mo</strong></p>
-        <p><strong>Location:</strong> Mumbai, Maharashtra, India</p>
-        <p>Clients/Projects:</p>
-        <ul>
-          <li><strong>PocketCFO</strong> - A US-based financial insights platform that provides business owners & startup founders with real-time cash flow visibility. <br>Responsibilities: Worked on a portal website using technologies such as React.js, Redux-toolkit.</li>
-          <li><strong>Karismatic Inventory App</strong> - A US-based inventory management platform that provides services like Urban Company. <br>Responsibilities: Developed a React Native application for Android/iOS platforms. Designed architecture, user interface, and optimized app performance and modularity.</li>
-          <li><strong>Sun West Mortgage Company</strong> - A mortgage finance services company licensed to originate loans across the US. <br>Responsibilities: Worked on various websites using React.js, Redux, Material-UI, React Native, Node.js, Express.js. Currently working on a live chat application built with React.js.</li>
-        </ul>
-      </div>
-
-      <!-- Experience at Classplus -->
-      <div class="job">
-        <h3>Mobile Application Developer (Intern) at Classplus</h3>
-        <p><strong>Jun 2020 - Sep 2020 · 4 mos</strong></p>
-        <p><strong>Location:</strong> Noida, Uttar Pradesh, India</p>
-        <p>Responsibilities:</p>
-        <ul>
-          <li>Built an Android app for the Classplus Sales Team using React Native.</li>
-          <li>Worked on displaying paginated and filtered data, developed forms using Formik.</li>
-          <li>Created reusable UI components like button, picker, modal, bottom sheet, and multiple select fields.</li>
-        </ul>
-      </div>
-
-      <!-- Experience at Ylurn -->
-      <div class="job">
-        <h3>React Developer (Intern) at Ylurn</h3>
-        <p><strong>Sep 2019 - Dec 2019 · 4 mos</strong></p>
-        <p><strong>Location:</strong> Chennai, Tamil Nadu, India</p>
-        <p>Responsibilities:</p>
-        <ul>
-          <li>Developed a mobile application for Android and iOS using React Native with Expo.</li>
-          <li>Worked on login/signup/forgot password functionality and course landing pages.</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-list">
-        <div class="skill">
-          <h3>Frontend</h3>
-          <ul>
-            <li>React.js, Next.js</li>
-            <li>Redux, React-Query</li>
-            <li>Modern CSS (Flexbox, Grid, Animations)</li>
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="status-pill reveal"><span class="dot"></span>Open to senior / staff frontend roles · open to relocation</p>
+          <p class="mono hero-prompt reveal"><span class="c-green">~/ahmad</span> <span class="c-muted">$</span> whoami</p>
+          <h1 class="hero-name reveal">Ahmad Sadiq</h1>
+          <h2 class="hero-role reveal">
+            Senior Frontend Engineer <span class="c-muted">building</span><br>
+            <span class="gradient-text typed" id="typed" aria-live="polite">fast, scalable web experiences</span><span class="caret" aria-hidden="true"></span>
+          </h2>
+          <p class="hero-lead reveal">
+            5.5+ years scaling high-traffic e-commerce &amp; membership platforms for <strong>100M+ users</strong> at
+            <strong class="c-target">Target</strong>. I turn performance engineering into business outcomes, like a
+            <strong class="hl">71% lift in registration completion</strong> from a load-time redesign.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's talk</a>
+            <a href="#impact" class="btn btn-ghost"><i class="fa-solid fa-chart-line"></i> See the impact</a>
+          </div>
+          <ul class="socials reveal" aria-label="Social links">
+            <li><a href="https://www.linkedin.com/in/persieahmad" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://github.com/persieahmad" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:ahmadsadiqq@outlook.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li class="loc"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</li>
           </ul>
         </div>
-        <div class="skill">
-          <h3>Backend</h3>
-          <ul>
-            <li>Node.js, Express.js</li>
-            <li>AWS, Firebase</li>
-            <li>GraphQL, REST APIs</li>
-          </ul>
-        </div>
-        <div class="skill">
-          <h3>Testing & Optimization</h3>
-          <ul>
-            <li>Unit Testing (Jest, Mocha)</li>
-            <li>Performance Optimization (Lighthouse)</li>
-            <li>Code Quality (ESLint, Prettier)</li>
-          </ul>
+
+        <div class="hero-visual reveal">
+          <div class="photo-wrap">
+            <div class="photo-ring" aria-hidden="true"></div>
+            <img src="assets/ahmad.jpg" alt="Portrait of Ahmad Sadiq" class="photo" width="640" height="640">
+            <div class="chip chip-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" class="invert-dark"> Next.js</div>
+            <div class="chip chip-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt=""> TypeScript</div>
+            <div class="chip chip-3 mono"><span class="c-green">●</span> LCP &lt; 2.5s</div>
+            <div class="chip chip-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt=""> React</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Feel free to reach out via email at <strong>ahmad.sadiq@example.com</strong></p>
-      <p>You can also find me on <a href="https://www.linkedin.com/in/ahmad-sadiq" target="_blank">LinkedIn</a> and <a href="https://github.com/ahmad-sadiq" target="_blank">GitHub</a>.</p>
-    </div>
-  </section>
+      <a href="#impact" class="scroll-hint" aria-label="Scroll to impact"><span></span></a>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Ahmad Sadiq</p>
+    <!-- ============ IMPACT ============ -->
+    <section id="impact" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">01. // impact</span>
+          <h2>Numbers that shipped</h2>
+          <p class="section-sub">Frontend work measured in business outcomes and validated through A/B experiments.</p>
+        </div>
+
+        <div class="bento">
+          <article class="stat stat-xl reveal">
+            <div class="stat-top"><i class="fa-solid fa-arrow-trend-up"></i><span class="tag">Circle 360 · A/B tested</span></div>
+            <p class="stat-num"><span class="count" data-to="71">71</span>%</p>
+            <p class="stat-label">relative lift in web registration completion</p>
+            <div class="bar-compare" aria-label="Registration completion went from 24.2% to 41.3%">
+              <div class="bar-row"><span class="mono">before</span><div class="bar"><i style="--w:24.2%"></i></div><span class="mono">24.2%</span></div>
+              <div class="bar-row"><span class="mono">after</span><div class="bar"><i class="good" style="--w:41.3%"></i></div><span class="mono">41.3%</span></div>
+            </div>
+            <p class="stat-foot">Load time cut from <b>~5–6s → ~2–3s</b> with server-rendered entry content and decoupled API calls.</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-box-open"></i><span class="tag">Code splitting</span></div>
+            <p class="stat-num"><span class="count" data-to="99.7" data-dec="1">99.7</span>%</p>
+            <p class="stat-label">route-level JS bundle reduction on high-traffic pages</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-users"></i><span class="tag">Scale</span></div>
+            <p class="stat-num"><span class="count" data-to="100">100</span>M+</p>
+            <p class="stat-label">users on the platforms I build at Target</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-ruler-combined"></i><span class="tag">Core Web Vitals</span></div>
+            <p class="stat-num mono-num">0.841<span class="arrow">→</span><span class="c-green">0.009</span></p>
+            <p class="stat-label">CLS on Gift Registry (desktop) with skeleton loading</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-microphone"></i><span class="tag">Innovation Week</span></div>
+            <p class="stat-num">+<span class="count" data-to="12">12</span>%</p>
+            <p class="stat-label">cart adds from the voice search I built for target.com</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-rocket"></i><span class="tag">Config Driven UI</span></div>
+            <p class="stat-num">~<span class="count" data-to="30">30</span>%</p>
+            <p class="stat-label">faster time-to-market for new Loyalty features</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-shield-halved"></i><span class="tag">Reliability</span></div>
+            <p class="stat-num"><span class="count" data-to="89">89</span>%</p>
+            <p class="stat-label">P0/P1 test coverage on core Loyalty flows (from a 6-phase program)</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-feather"></i><span class="tag">Gift Registry</span></div>
+            <p class="stat-num">−<span class="count" data-to="203">203</span>KB</p>
+            <p class="stat-label">First Load JS (gzipped) across nine routes</p>
+          </article>
+
+          <article class="stat reveal">
+            <div class="stat-top"><i class="fa-solid fa-universal-access"></i><span class="tag">WCAG</span></div>
+            <p class="stat-num"><span class="count" data-to="100">100</span>%</p>
+            <p class="stat-label">accessibility compliance on Gift Registry features</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <span class="eyebrow mono">02. // about</span>
+          <h2>Performance-obsessed, outcome-driven</h2>
+          <p>
+            I'm a Senior Frontend Engineer at <strong>Target</strong> on the Loyalty team, and I'm part of the
+            <strong>Web Performance Guild</strong> and the <strong>Config Driven UI Foundations</strong> team.
+          </p>
+          <p>
+            My focus is <span class="hl">Core Web Vitals and performance engineering</span>,
+            <span class="hl">config-driven / server-driven UI architecture</span> and
+            <span class="hl">cross-platform (Web, iOS, Android) component systems</span>. I like work that ties
+            frontend engineering to numbers the business cares about, and I check that with real experiments.
+          </p>
+          <p>
+            I also build platform foundations and developer tooling, including a production
+            <strong>AI-assisted code-remediation bot</strong> that opens fix PRs across almost every Web repo every week.
+          </p>
+          <div class="about-meta">
+            <div><i class="fa-solid fa-briefcase"></i> Senior Engineer @ Target</div>
+            <div><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE, AKTU '21</div>
+            <div><i class="fa-solid fa-location-dot"></i> Bengaluru · open to relocation</div>
+          </div>
+        </div>
+
+        <div class="code-card reveal" aria-label="Profile as a code snippet">
+          <div class="code-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="mono file">ahmad.config.ts</span>
+            <span></span>
+          </div>
+<pre class="code"><code><span class="k">export const</span> <span class="v">ahmad</span> <span class="p">=</span> {
+  <span class="key">role</span>: <span class="s">'Senior Frontend Engineer'</span>,
+  <span class="key">company</span>: <span class="s">'Target'</span>,
+  <span class="key">experience</span>: <span class="n">5.5</span>, <span class="c">// years, and counting</span>
+  <span class="key">scale</span>: <span class="s">'100M+ users'</span>,
+  <span class="key">focus</span>: [
+    <span class="s">'Core Web Vitals'</span>,
+    <span class="s">'Config Driven UI'</span>,
+    <span class="s">'Micro-frontends'</span>,
+    <span class="s">'SSR / App Router'</span>,
+  ],
+  <span class="key">aiTooling</span>: [<span class="s">'Claude Code'</span>, <span class="s">'Copilot'</span>, <span class="s">'Codex'</span>],
+  <span class="key">motto</span>: <span class="s">'Ship fast. Measure faster.'</span>,
+} <span class="k">satisfies</span> <span class="t">Engineer</span>;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">03. // experience</span>
+          <h2>Where I've worked</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-dot current"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <div>
+                  <h3>Senior Engineer <span class="at">@ <span class="c-target">Target</span></span></h3>
+                  <p class="tl-sub">Loyalty Team · Web Performance Guild · Config Driven UI Foundations</p>
+                </div>
+                <span class="tl-date mono">Jul 2023 — Present</span>
+              </header>
+              <ul class="tl-points">
+                <li>Redesigned the <b>Circle 360 Buy Now</b> loading sequence, cutting load time from <mark>~5–6s to ~2–3s</mark> and driving a <mark>~71% relative lift</mark> in registration completion (24.2% → 41.3%), measured with a controlled A/B analysis.</li>
+                <li>Shipped a <b>Cart membership-detail prefetch</b> strategy, validated over a 4-week experiment, with a sustained <mark>1.6–1.9% lift</mark> in membership registrations and no marketing spend.</li>
+                <li>Reduced route-level JS bundles by <mark>80–99.7%</mark> across high-traffic pages through dynamic imports and code-splitting, without breaking SSR/SEO.</li>
+                <li>Architected and led the migration of business-critical Loyalty experiences to <b>Config Driven UI</b>, cutting time-to-market by <mark>~30%</mark>.</li>
+                <li>Led the full <b>Next.js App Router migration</b> of the Loyalty micro-site and fixed cross-boundary hydration issues.</li>
+                <li>Fixed a Circle Dashboard <b>LCP regression</b> (6–10s render delay) and brought LCP <mark>below 2.5s</mark>.</li>
+                <li>Built <b>codehealthbot</b>, an AI-powered Node.js service that auto-fixes SonarQube findings and opens review-gated PRs across nearly all Web repos every week.</li>
+                <li>Delivered a six-phase reliability program (OpenTelemetry, Grafana/Kibana) that lifted P0/P1 test coverage to <mark>84–89%</mark>.</li>
+                <li>Built a cross-platform (Web/iOS/Android) component library and an internal AI-context repo + GPT for onboarding. Mentored 2 engineers and presented at Demo Day &amp; Innovation Week.</li>
+              </ul>
+              <ul class="tags">
+                <li>Next.js</li><li>React</li><li>TypeScript</li><li>App Router</li><li>React Query</li><li>Micro-Frontends</li><li>Playwright</li><li>Cypress</li><li>Storybook</li><li>GraphQL</li><li>OpenTelemetry</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <div>
+                  <h3>Engineer <span class="at">@ <span class="c-target">Target</span></span></h3>
+                  <p class="tl-sub">Gift Registry &amp; Favorites Team</p>
+                </div>
+                <span class="tl-date mono">Mar 2022 — Jul 2023</span>
+              </header>
+              <ul class="tl-points">
+                <li>Built WCAG-compliant Gift Registry features with <mark>100% accessibility compliance</mark> scores for millions of users.</li>
+                <li>Led the migration of the high-traffic <b>Favorites</b> page to micro-frontends, cutting bundle size by <mark>60%</mark>.</li>
+                <li>Cut Registry First Load JS by <mark>203KB gzipped</mark> across nine routes by lazy-loading modals, drawers and dropdowns.</li>
+                <li>Improved Gift Registry CLS from <mark>0.841 → 0.009</mark> with skeleton loading states.</li>
+                <li>Led the <b>React 18 migration</b> and moved Registry/Favorites flows to a modern API platform.</li>
+                <li>Built <b>voice search for target.com</b> on my own during Innovation Week. Its A/B test showed a <mark>12% lift in cart adds</mark> and it shipped to 100% of production.</li>
+              </ul>
+              <ul class="tags">
+                <li>TypeScript</li><li>React</li><li>Next.js</li><li>GraphQL</li><li>Node.js</li><li>Express</li><li>Firebase</li><li>MongoDB</li><li>Webpack</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <div>
+                  <h3>System Analyst <span class="at">@ Speridian Technologies</span></h3>
+                  <p class="tl-sub">Mumbai, India</p>
+                </div>
+                <span class="tl-date mono">Mar 2021 — Mar 2022</span>
+              </header>
+              <ul class="tl-points">
+                <li>Built a cross-platform, <b>offline-first React Native</b> inventory management app from scratch for field operators.</li>
+                <li>Optimized Redux state management to support complex data visualizations for high-net-worth business clients.</li>
+              </ul>
+              <ul class="tags"><li>React Native</li><li>Redux</li><li>React</li></ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card compact">
+              <header class="tl-head">
+                <div>
+                  <h3>Mobile App Developer Intern <span class="at">@ Classplus</span></h3>
+                  <p class="tl-sub">Noida, India · Android sales-team app in React Native with reusable UI components and Formik forms.</p>
+                </div>
+                <span class="tl-date mono">Jun 2020 — Sep 2020</span>
+              </header>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card compact">
+              <header class="tl-head">
+                <div>
+                  <h3>React Developer Intern <span class="at">@ Ylurn</span></h3>
+                  <p class="tl-sub">Chennai, India · iOS/Android app screens with React Native + Expo, including auth flows and course pages.</p>
+                </div>
+                <span class="tl-date mono">Sep 2019 — Dec 2019</span>
+              </header>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ HIGHLIGHTS ============ -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">04. // highlights</span>
+          <h2>Things I'm proud of</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Circle 360 Buy Now redesign</h3>
+            <p>Server-rendered entry content and decoupled dependent API calls. Load time halved and registrations jumped from 24.2% to 41.3%.</p>
+            <p class="card-metric mono">+71% registration completion</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3>codehealthbot</h3>
+            <p>A Node.js service that reads SonarQube findings and uses an internal AI model to auto-fix lint, quality and deprecated-code issues, opening PRs with full rationale every week.</p>
+            <p class="card-metric mono">🏆 Spot Award, Aug 2026</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <h3>Voice search on target.com</h3>
+            <p>Designed and built on my own with the Web SpeechRecognition API during Innovation Week, pitched to the Search PM, then A/B tested and rolled out to 100%.</p>
+            <p class="card-metric mono">+12% cart adds</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Config Driven UI platform</h3>
+            <p>Moved Loyalty experiences to server/config-driven UI and built a cross-platform Web/iOS/Android component library on top of it.</p>
+            <p class="card-metric mono">~30% faster time-to-market</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h3>Next.js App Router migration</h3>
+            <p>Led the full migration of the Loyalty micro-site and fixed cross-boundary hydration issues without losing SSR behaviour.</p>
+            <p class="card-metric mono">SSR preserved · zero SEO loss</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Cart prefetch experiment</h3>
+            <p>A targeted membership-detail prefetch in Cart, validated over a 4-week experiment.</p>
+            <p class="card-metric mono">+1.6–1.9% registrations · $0 spend</p>
+          </article>
+        </div>
+
+        <div class="awards">
+          <div class="award reveal">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+              <h3>Monthly Spot Award: Ownership, Innovation &amp; Impact</h3>
+              <p>Target · Aug 2026 · for turning codehealthbot into a review-gated engineering-efficiency solution.</p>
+            </div>
+          </div>
+          <div class="award reveal">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <h3>Pyramid Award</h3>
+              <p>Target · for leading concurrent Web feature delivery across Product, UX and Loyalty partners.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow mono">05. // stack</span>
+          <h2>Tools of the trade</h2>
+        </div>
+
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-code"></i> Languages &amp; Frameworks</h3>
+            <ul class="logos">
+              <li data-icon="javascript/javascript-original">JavaScript</li>
+              <li data-icon="typescript/typescript-original">TypeScript</li>
+              <li data-icon="react/react-original">React</li>
+              <li data-icon="nextjs/nextjs-original" data-invert>Next.js</li>
+              <li data-icon="react/react-original">React Native</li>
+              <li data-icon="nodejs/nodejs-original">Node.js</li>
+              <li data-icon="express/express-original" data-invert>Express</li>
+              <li data-icon="graphql/graphql-plain">GraphQL</li>
+              <li data-icon="redux/redux-original">Redux</li>
+              <li data-icon="kotlin/kotlin-original">Kotlin</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-vial-circle-check"></i> Quality &amp; Testing</h3>
+            <ul class="logos">
+              <li data-icon="playwright/playwright-original">Playwright</li>
+              <li data-icon="cypressio/cypressio-original" data-invert>Cypress</li>
+              <li data-icon="storybook/storybook-original">Storybook</li>
+              <li data-icon="jest/jest-plain">RTL / Jest</li>
+              <li data-fa="fa-solid fa-universal-access">WCAG a11y</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-chart-area"></i> Observability</h3>
+            <ul class="logos">
+              <li data-icon="opentelemetry/opentelemetry-original">OpenTelemetry</li>
+              <li data-icon="grafana/grafana-original">Grafana</li>
+              <li data-icon="kibana/kibana-original">Kibana</li>
+              <li data-fa="fa-solid fa-bell">GoAlert / On-call</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-wand-magic-sparkles"></i> AI &amp; Automation</h3>
+            <ul class="logos">
+              <li data-fa="fa-solid fa-asterisk">Claude Code</li>
+              <li data-icon="githubcopilot/githubcopilot-original" data-invert>GitHub Copilot</li>
+              <li data-fa="fa-solid fa-terminal">Codex</li>
+              <li data-fa="fa-solid fa-robot">AI code remediation</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-toolbox"></i> Data &amp; Build</h3>
+            <ul class="logos">
+              <li data-icon="firebase/firebase-original">Firebase</li>
+              <li data-icon="mongodb/mongodb-original">MongoDB</li>
+              <li data-icon="webpack/webpack-original">Webpack</li>
+              <li data-icon="babel/babel-original">Babel</li>
+              <li data-icon="git/git-original">Git</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3><i class="fa-solid fa-sitemap"></i> Architecture &amp; Performance</h3>
+            <ul class="pills">
+              <li>Micro-frontends</li><li>Config Driven UI</li><li>System Design</li><li>Multi-Site Architecture</li>
+              <li>SSR &amp; App Router</li><li>Edge Compute</li><li>CDN &amp; HTTP Caching</li><li>Core Web Vitals (LCP · CLS · INP)</li>
+              <li>Code-splitting</li><li>Prefetching</li><li>A/B Testing</li><li>Technical Spikes &amp; ADRs</li><li>API Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="edu reveal">
+          <div class="edu-item">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <h3>B.Tech, Computer Science &amp; Engineering</h3>
+              <p>Dr. A.P.J. Abdul Kalam Technical University · 2017 – 2021</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <i class="fa-solid fa-certificate"></i>
+            <div>
+              <h3>Certifications</h3>
+              <p>Front End Libraries (Bootstrap, jQuery, React, Redux) · Server-Side Development with Node.js, Express &amp; MongoDB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="eyebrow mono">06. // contact</span>
+          <h2>Let's build something <span class="gradient-text">fast</span>.</h2>
+          <p class="section-sub">Open to senior and staff frontend roles, and happy to talk web performance, architecture or AI-assisted engineering.</p>
+
+          <div class="terminal">
+            <div class="code-bar"><span class="dots"><i></i><i></i><i></i></span><span class="mono file">zsh — contact</span><span></span></div>
+            <div class="term-body mono">
+              <p><span class="c-green">➜</span> <span class="c-cyan">~</span> cat contact.json</p>
+              <p>{</p>
+              <p>&nbsp;&nbsp;<span class="key">"email"</span>: <a href="mailto:ahmadsadiqq@outlook.com" class="s">"ahmadsadiqq@outlook.com"</a>,</p>
+              <p>&nbsp;&nbsp;<span class="key">"linkedin"</span>: <a href="https://www.linkedin.com/in/persieahmad" target="_blank" rel="noopener" class="s">"in/persieahmad"</a>,</p>
+              <p>&nbsp;&nbsp;<span class="key">"github"</span>: <a href="https://github.com/persieahmad" target="_blank" rel="noopener" class="s">"persieahmad"</a>,</p>
+              <p>&nbsp;&nbsp;<span class="key">"location"</span>: <span class="s">"Bengaluru, India"</span></p>
+              <p>}</p>
+              <p><span class="c-green">➜</span> <span class="c-cyan">~</span> <span class="caret"></span></p>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="mailto:ahmadsadiqq@outlook.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Say hello</a>
+            <button class="btn btn-ghost" id="copyEmail" data-email="ahmadsadiqq@outlook.com"><i class="fa-regular fa-copy"></i> <span>Copy email</span></button>
+            <a href="https://www.linkedin.com/in/persieahmad" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="mono">Designed &amp; built by Ahmad Sadiq · <span class="c-muted">HTML, CSS &amp; vanilla JS, no framework required</span></p>
+      <p class="mono c-muted">© <span id="year">2026</span></p>
     </div>
   </footer>
 
