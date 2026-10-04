@@ -185,17 +185,6 @@ mark {
 .hero { min-height: 100svh; display: flex; align-items: center; padding: 110px 0 80px; position: relative; overflow-x: clip; }
 .hero-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
 
-.status-pill {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: .8rem; color: var(--text-2);
-  padding: 6px 14px; border-radius: 999px;
-  border: 1px solid var(--border); background: var(--surface);
-  margin-bottom: 22px;
-}
-.status-pill .dot {
-  width: 8px; height: 8px; border-radius: 50%; background: var(--green);
-  box-shadow: 0 0 0 0 var(--green); animation: pulse 2s infinite;
-}
 .hero-prompt { color: var(--text-2); font-size: .95rem; margin-bottom: 6px; }
 .hero-name {
   font-size: clamp(2.8rem, 7vw, 5.2rem); font-weight: 800; line-height: 1.02;
@@ -473,11 +462,6 @@ mark {
 
 /* ---------- Keyframes ---------- */
 @keyframes blink { 50% { opacity: 0; } }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--green) 60%, transparent); }
-  70% { box-shadow: 0 0 0 10px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
-}
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 @keyframes spin { to { rotate: 360deg; } }
 @keyframes morph {
