@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 
   <script>
@@ -97,10 +97,10 @@
           <div class="photo-wrap">
             <div class="photo-ring" aria-hidden="true"></div>
             <img src="assets/ahmad.jpg" alt="Portrait of Ahmad Sadiq" class="photo" width="640" height="640">
-            <div class="chip chip-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" class="invert-dark"> Next.js</div>
-            <div class="chip chip-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt=""> TypeScript</div>
+            <div class="chip chip-1"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#nextjs"/></svg> Next.js</div>
+            <div class="chip chip-2"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#typescript"/></svg> TypeScript</div>
             <div class="chip chip-3 mono"><span class="c-green">●</span> LCP &lt; 2.5s</div>
-            <div class="chip chip-4"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt=""> React</div>
+            <div class="chip chip-4"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#react"/></svg> React</div>
           </div>
         </div>
       </div>
@@ -245,7 +245,7 @@
             <div class="tl-card">
               <header class="tl-head">
                 <div>
-                  <h3>Senior Engineer <span class="at">@ <span class="c-target">Target</span></span></h3>
+                  <h3>Senior Engineer <span class="at">@ <span class="c-target"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#target"/></svg>Target</span></span></h3>
                   <p class="tl-sub">Loyalty Team · Web Performance Guild · Config Driven UI Foundations</p>
                 </div>
                 <span class="tl-date mono">Jul 2023 — Present</span>
@@ -272,7 +272,7 @@
             <div class="tl-card">
               <header class="tl-head">
                 <div>
-                  <h3>Engineer <span class="at">@ <span class="c-target">Target</span></span></h3>
+                  <h3>Engineer <span class="at">@ <span class="c-target"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#target"/></svg>Target</span></span></h3>
                   <p class="tl-sub">Gift Registry &amp; Favorites Team</p>
                 </div>
                 <span class="tl-date mono">Mar 2022 — Jul 2023</span>
@@ -421,58 +421,60 @@
           <div class="skill-group reveal">
             <h3><i class="fa-solid fa-code"></i> Languages &amp; Frameworks</h3>
             <ul class="logos">
-              <li data-icon="javascript/javascript-original">JavaScript</li>
-              <li data-icon="typescript/typescript-original">TypeScript</li>
-              <li data-icon="react/react-original">React</li>
-              <li data-icon="nextjs/nextjs-original" data-invert>Next.js</li>
-              <li data-icon="react/react-original">React Native</li>
-              <li data-icon="nodejs/nodejs-original">Node.js</li>
-              <li data-icon="express/express-original" data-invert>Express</li>
-              <li data-icon="graphql/graphql-plain">GraphQL</li>
-              <li data-icon="redux/redux-original">Redux</li>
-              <li data-icon="kotlin/kotlin-original">Kotlin</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#javascript"/></svg>JavaScript</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#typescript"/></svg>TypeScript</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#react"/></svg>React</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#nextjs"/></svg>Next.js</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#react"/></svg>React Native</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#nodejs"/></svg>Node.js</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#express"/></svg>Express</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#graphql"/></svg>GraphQL</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#redux"/></svg>Redux</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#reactquery"/></svg>React Query</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#kotlin"/></svg>Kotlin</li>
             </ul>
           </div>
 
           <div class="skill-group reveal">
             <h3><i class="fa-solid fa-vial-circle-check"></i> Quality &amp; Testing</h3>
             <ul class="logos">
-              <li data-icon="playwright/playwright-original">Playwright</li>
-              <li data-icon="cypressio/cypressio-original" data-invert>Cypress</li>
-              <li data-icon="storybook/storybook-original">Storybook</li>
-              <li data-icon="jest/jest-plain">RTL / Jest</li>
-              <li data-fa="fa-solid fa-universal-access">WCAG a11y</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#playwright"/></svg>Playwright</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#cypress"/></svg>Cypress</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#storybook"/></svg>Storybook</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#testinglibrary"/></svg>React Testing Library</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#jest"/></svg>Jest</li>
+              <li><i class="fa-solid fa-universal-access" aria-hidden="true"></i>WCAG a11y</li>
             </ul>
           </div>
 
           <div class="skill-group reveal">
             <h3><i class="fa-solid fa-chart-area"></i> Observability</h3>
             <ul class="logos">
-              <li data-icon="opentelemetry/opentelemetry-original">OpenTelemetry</li>
-              <li data-icon="grafana/grafana-original">Grafana</li>
-              <li data-icon="kibana/kibana-original">Kibana</li>
-              <li data-fa="fa-solid fa-bell">GoAlert / On-call</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#opentelemetry"/></svg>OpenTelemetry</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#grafana"/></svg>Grafana</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#kibana"/></svg>Kibana</li>
+              <li><i class="fa-solid fa-bell" aria-hidden="true"></i>GoAlert / On-call</li>
             </ul>
           </div>
 
           <div class="skill-group reveal">
             <h3><i class="fa-solid fa-wand-magic-sparkles"></i> AI &amp; Automation</h3>
             <ul class="logos">
-              <li data-fa="fa-solid fa-asterisk">Claude Code</li>
-              <li data-icon="githubcopilot/githubcopilot-original" data-invert>GitHub Copilot</li>
-              <li data-fa="fa-solid fa-terminal">Codex</li>
-              <li data-fa="fa-solid fa-robot">AI code remediation</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#claude"/></svg>Claude Code</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#githubcopilot"/></svg>GitHub Copilot</li>
+              <li><i class="fa-solid fa-terminal" aria-hidden="true"></i>Codex</li>
+              <li><i class="fa-solid fa-robot" aria-hidden="true"></i>AI code remediation</li>
             </ul>
           </div>
 
           <div class="skill-group reveal">
             <h3><i class="fa-solid fa-toolbox"></i> Data &amp; Build</h3>
             <ul class="logos">
-              <li data-icon="firebase/firebase-original">Firebase</li>
-              <li data-icon="mongodb/mongodb-original">MongoDB</li>
-              <li data-icon="webpack/webpack-original">Webpack</li>
-              <li data-icon="babel/babel-original">Babel</li>
-              <li data-icon="git/git-original">Git</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#firebase"/></svg>Firebase</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#mongodb"/></svg>MongoDB</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#webpack"/></svg>Webpack</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#babel"/></svg>Babel</li>
+              <li><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#git"/></svg>Git</li>
             </ul>
           </div>
 

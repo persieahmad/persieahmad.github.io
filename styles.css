@@ -182,7 +182,7 @@ mark {
 .btn-ghost:hover { transform: translateY(-2px); border-color: var(--accent); }
 
 /* ---------- Hero ---------- */
-.hero { min-height: 100svh; display: flex; align-items: center; padding: 110px 0 80px; position: relative; }
+.hero { min-height: 100svh; display: flex; align-items: center; padding: 110px 0 80px; position: relative; overflow-x: clip; }
 .hero-inner { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: center; }
 
 .status-pill {
@@ -245,12 +245,13 @@ mark {
   box-shadow: var(--shadow);
   animation: float 6s ease-in-out infinite;
 }
-.chip img { width: 18px; height: 18px; }
+.ico { width: 1.15em; height: 1.15em; flex: none; color: var(--text); }
+.chip .ico { width: 18px; height: 18px; }
+.c-target .ico { width: .9em; height: .9em; margin-right: 6px; vertical-align: -0.08em; }
 .chip-1 { top: 6%; left: -12%; }
 .chip-2 { top: 18%; right: -14%; animation-delay: -1.5s; }
 .chip-3 { bottom: 14%; left: -16%; animation-delay: -3s; }
 .chip-4 { bottom: 2%; right: -6%; animation-delay: -4.5s; }
-[data-theme="dark"] .invert-dark, [data-theme="dark"] img[data-invert] { filter: invert(1); }
 
 .scroll-hint {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
@@ -437,7 +438,7 @@ mark {
   transition: transform .2s, border-color .2s;
 }
 .logos li:hover { transform: translateY(-2px); border-color: var(--accent); }
-.logos img { width: 20px; height: 20px; }
+.logos .ico { width: 20px; height: 20px; }
 .logos li > i { color: var(--accent); width: 20px; text-align: center; }
 .pills { display: flex; flex-wrap: wrap; gap: 8px; }
 .pills li {
@@ -497,6 +498,12 @@ mark {
   .bento { grid-template-columns: repeat(2, 1fr); }
   .cards, .skill-groups { grid-template-columns: repeat(2, 1fr); }
   }
+
+@media (min-width: 861px) and (max-width: 1180px) {
+  .hero-inner { gap: 40px; }
+  .photo-wrap { width: min(320px, 100%); }
+  .chip-1 { left: -6%; } .chip-2 { right: -4%; } .chip-3 { left: -8%; } .chip-4 { right: 0; }
+}
 
 @media (max-width: 860px) {
   .menu-btn { display: grid; }

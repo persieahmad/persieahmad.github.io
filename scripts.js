@@ -1,7 +1,6 @@
 (() => {
   const root = document.documentElement;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const DEVICON = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/';
 
   // ---------- Theme toggle ----------
   document.getElementById('themeToggle').addEventListener('click', () => {
@@ -91,25 +90,6 @@
     };
     setTimeout(step, 2600);
   }
-
-  // ---------- Tech logos ----------
-  document.querySelectorAll('.logos li').forEach((li) => {
-    if (li.dataset.fa) {
-      li.insertAdjacentHTML('afterbegin', `<i class="${li.dataset.fa}" aria-hidden="true"></i>`);
-      return;
-    }
-    if (!li.dataset.icon) return;
-    const img = new Image();
-    img.src = `${DEVICON}${li.dataset.icon}.svg`;
-    img.alt = '';
-    img.loading = 'lazy';
-    img.width = img.height = 20;
-    if ('invert' in li.dataset) img.setAttribute('data-invert', '');
-    img.onerror = () => img.replaceWith(Object.assign(document.createElement('i'), {
-      className: 'fa-solid fa-code', ariaHidden: 'true',
-    }));
-    li.prepend(img);
-  });
 
   // ---------- Spotlight on stat cards ----------
   document.querySelectorAll('.stat').forEach((card) => {
